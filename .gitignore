@@ -1,4 +1,7 @@
-.idea/**
+**/.idea/**
+backend/.gradle
+backend/gradle
+backend/build
 
 # Compiled class file
 *.class
