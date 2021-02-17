@@ -4,12 +4,11 @@
 
 <script>
 
-
 export default {
   name: 'App'
 }
-</script>
 
+</script>
 
 
 <style>
