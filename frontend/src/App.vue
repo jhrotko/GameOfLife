@@ -16,8 +16,10 @@ export default {
 }
 
 </script>
+2/2
+(0,0),(0,1)
 
-
+(0,0),(0,1), undefinedm undefined
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
