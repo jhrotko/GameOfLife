@@ -1,0 +1,38 @@
+.board {
+    margin: 0 auto;
+}
+
+table {
+    border-spacing: 0.5rem;
+}
+
+table > td {
+    text-align: center;
+    height: 5px;
+    width: 5px;
+    padding-left: 1.0rem;
+    padding-right: 10.0rem;
+}
+
+.alive {
+    color:white;
+    background-image: linear-gradient(to right, #ff5668, #f8007b);
+}
+
+.dead {
+    color: #252b37;
+    background-color: #151823;
+    animation: textColor 10s ease infinite;
+
+    @keyframes textColor {
+        0% {
+            color: #7e0fff;
+        }
+        50% {
+            color: #0fffc1;
+        }
+        100% {
+            color: #7e0fff;
+        }
+    }
+}

@@ -1,32 +1,25 @@
 <template>
-  <div>
-    <p>Game of Life</p>
-    <Board v-bind:width="2" v-bind:height="2" v-bind:aliveCells="[[0,0], [0,1]]"/>
+  <div id="app">
+    <h1>Game of Life</h1>
+    <Board
+      v-bind:height="4"
+      v-bind:width="4"
+      v-bind:aliveCells="[
+        [0, 0],
+        [0, 1],
+		[2,3]]"
+    />
   </div>
 </template>
 
 <script>
-import Board from "@/components/Board.vue"
+import "./App.scss"
+import Board from "@/components/organism/Board.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Board
-  }
-}
-
+    Board,
+  },
+};
 </script>
-2/2
-(0,0),(0,1)
-
-(0,0),(0,1), undefinedm undefined
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
-}
-</style>
