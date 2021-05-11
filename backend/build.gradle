@@ -1,33 +1,25 @@
 plugins {
     id "org.jetbrains.kotlin.jvm" version "$kotlin_version"
-    id "org.jetbrains.kotlin.plugin.serialization" version "$kotlin_version"
     id "application"
 }
-
 
 group "com.jetbrains.handson"
 version "1.0-SNAPSHOT"
 
 repositories {
-    jcenter()
     mavenCentral()
-    maven {
-        url "https://kotlin.bintray.com/kotlinx"
-    }
 }
 
 dependencies {
-    implementation "io.ktor:ktor-server-core:$ktor_version"
-    implementation "io.ktor:ktor-server-netty:$ktor_version"
-    implementation "ch.qos.logback:logback-classic:$logback_version"
-    implementation "io.ktor:ktor-serialization:$ktor_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-core:$kotlin_serialization"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
-    testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+    compile 'io.javalin:javalin:3.13.7'
+    compile "org.slf4j:slf4j-simple:1.7.30"
+    compile "com.fasterxml.jackson.core:jackson-databind:2.10.3"
+
     testImplementation "org.assertj:assertj-core:3.12.2"
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.4.2"
     testImplementation "junit:junit:4.13"
-
 }
 
 test {
@@ -40,8 +32,3 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
-
-application {
-    mainClassName = "com.jetbrains.handson.httpapi.ApplicationKt"
-}
-

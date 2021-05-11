@@ -1,8 +1,6 @@
 package core.entities
 
-//enum class State { ALIVE, DEAD }
 class Cell(private val x: Int, private val y: Int) {
-
     var state: State = Dead(this)
 
     fun alive(): Cell {
